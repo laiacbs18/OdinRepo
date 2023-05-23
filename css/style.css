@@ -74,9 +74,10 @@ body {
   padding-bottom: 15px;
 }
 
-.heroSingUpButton {
+.heroSignUpButton,
+.blockSignUpButton {
   background-color: #3882f6;
-  border: none;
+  border: 1px white solid;
   border-radius: 5px;
   color: white;
   padding: 10px 25px;
@@ -136,6 +137,23 @@ body {
 
 .author {
   padding-top: 5px;
+}
+
+.block3 {
+  color: #e5e7eb;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.subscribeBlock {
+  background: #3882f6;
+  border: 3px solid #3882f6;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer {
