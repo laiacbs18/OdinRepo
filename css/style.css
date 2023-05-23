@@ -1,0 +1,146 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 25px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.menu,
+.hero {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.menu,
+.menuItems,
+.infoContent {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+}
+
+.headerLogo {
+  color: #f9faf8;
+  font-size: 24px;
+}
+
+.menuItems {
+  gap: 25px;
+}
+
+.menu,
+.hero,
+.footer {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.hero,
+.footer,
+.block1,
+.block2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.heroContent,
+.heroImg {
+  max-width: 550px;
+}
+
+.heroTitle {
+  color: #f9faf8;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.heroText {
+  padding-bottom: 15px;
+}
+
+.heroSingUpButton {
+  background-color: #3882f6;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.block1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.infoHeader {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1f2937;
+  padding-bottom: 25px;
+}
+
+.infoContent {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.infoCard {
+  width: 150px;
+}
+
+.infoTxt {
+  padding-top: 5px;
+}
+
+.infoBox {
+  border: 3px solid #3882f6;
+  border-radius: 5px;
+  height: 150px;
+}
+
+.block2 {
+  background: #e5e7eb;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  font-size: 36px;
+  font-style: italic;
+  color: #1f2937;
+}
+
+.quote,
+.author {
+  width: 100%;
+  max-width: 800px;
+}
+
+.author {
+  padding-top: 5px;
+}
+
+.footer {
+  font-size: 18px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+}
