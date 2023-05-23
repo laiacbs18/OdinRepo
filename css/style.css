@@ -141,8 +141,8 @@ body {
 
 .block3 {
   color: #e5e7eb;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex: 1;
   justify-content: center;
@@ -153,7 +153,17 @@ body {
   border: 3px solid #3882f6;
   border-radius: 5px;
   display: flex;
-  justify-content: space-around;
+  padding: 30px;
+}
+
+.subscribeTxt,
+.blockSignUpButton {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.subscribeTxt > p {
+  width: 100%;
 }
 
 .footer {
