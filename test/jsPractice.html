@@ -7,33 +7,95 @@
   <body>
     <script>
       // Your JavaScript goes here!
-      console.log("Hello, World!");
+      /* console.log("Hello, World!");
 
-      function favoriteAnimal(animal) {
-        return animal + " is my favorite animal!";
-      }
+            function favoriteAnimal(animal) {
+              return animal + " is my favorite animal!";
+            }
 
-      console.log(favoriteAnimal("Dog"));
+            console.log(favoriteAnimal("Dog"));
 
-      let answer = parseInt(
-        prompt("Please enter the number you would like to FizzBuzz up to: ")
-      );
+            let answer = parseInt(
+              prompt("Please enter the number you would like to FizzBuzz up to: ")
+            );
 
-      FizzBuzz(answer);
+            FizzBuzz(answer);
 
-      //FizzBuzz
-      function FizzBuzz(number) {
-        for (var i = 1; i <= number; i++) {
-          if (i % 3 === 0 && i % 5 === 0) {
-            console.log("FizzBuzz");
-          } else if (i % 3 === 0) {
-            console.log("Fizz");
-          } else if (i % 5 === 0) {
-            console.log("Buzz");
+            //FizzBuzz
+            function FizzBuzz(number) {
+              for (var i = 1; i <= number; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                  console.log("FizzBuzz");
+                } else if (i % 3 === 0) {
+                  console.log("Fizz");
+                } else if (i % 5 === 0) {
+                  console.log("Buzz");
+                } else {
+                  console.log(i);
+                }
+              }
+            }*/
+      var isContinue = "yes";
+
+      while (isContinue == "yes" || isContinue == "y") {
+        const myOptions = ["r", "p", "s"];
+        var rounds = 1;
+        var pointsP = 0;
+        var pointsC = 0;
+
+        game();
+
+        function game() {
+          pointsP = 0;
+          pointsC = 0;
+          rounds = prompt("How many rounds do you wish to play?");
+
+          for (var i = 0; i < rounds; i++) {
+            var playerSelection;
+            var computerSelection = myOptions[getComputerChoice()];
+            console.log("computerSelection: " + computerSelection);
+
+            playerSelection = prompt(
+              "Pick one [Rock = r/Paper = p/Scissors = s]: "
+            );
+
+            function getComputerChoice() {
+              var random = Math.floor(Math.random() * myOptions.length);
+              return random;
+            }
+
+            playRound(playerSelection, computerSelection);
+
+            function playRound(playerSelection, computerSelection) {
+              if (playerSelection === "r" && computerSelection === "s") {
+                pointsP++;
+              } else if (playerSelection === "p" && computerSelection === "r") {
+                pointsP++;
+              } else if (playerSelection === "s" && computerSelection === "p") {
+                pointsP++;
+              }
+
+              if (computerSelection === "r" && playerSelection === "s") {
+                pointsC++;
+              } else if (computerSelection === "p" && playerSelection === "r") {
+                pointsC++;
+              } else if (computerSelection === "s" && playerSelection === "p") {
+                pointsC++;
+              }
+            }
+            console.log("Points: P - " + pointsP + " VS C - " + pointsC);
+          }
+
+          if (pointsP > pointsC) {
+            console.log("The Player wins!!");
+          } else if (pointsP < pointsC) {
+            console.log("The Computer wins!!");
           } else {
-            console.log(i);
+            console.log("It's a tie.'");
           }
         }
+
+        isContinue = prompt("Do you wish to play another round? (y/n)");
       }
     </script>
   </body>
